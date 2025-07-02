@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SeoulMate - Visa and Business Setup Consulting</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Sora:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        primary: '#1e40af',
+        secondary: '#10b981'
+      },
+      borderRadius: {
+        'none': '0px',
+        'sm': '4px',
+        DEFAULT: '8px',
+        'md': '12px',
+        'lg': '16px',
+        'xl': '20px',
+        '2xl': '24px',
+        '3xl': '32px',
+        'full': '9999px',
+        'button': '8px'
+      },
+      fontFamily: {
+        'heading': ['Sora', 'sans-serif'],
+        'body': ['Inter', 'sans-serif']
+      }
+    }
+  }
+}
+</script>
+
+<style>
+html {
+  scroll-behavior: smooth;
+}
+
+:where([class^="ri-"])::before { content: "\f3c2"; }
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+h1, h2, h3 {
+  font-family: 'Sora', sans-serif;
+}
+.hero-section {
+  background-image: url('https://readdy.ai/api/search-image?query=majestic%20night%20view%20of%20N%20Seoul%20Tower%20illuminated%20against%20dark%20sky%2C%20standing%20tall%20on%20Namsan%20Mountain%2C%20city%20lights%20twinkling%20below%2C%20dramatic%20architectural%20photography%2C%20professional%20high%20end%20shot%2C%20clean%20composition%20with%20deep%20rich%20colors%2C%20iconic%20landmark%20photography%20with%20perfect%20lighting&width=1200&height=600&seq=126&orientation=landscape');
+  background-size: cover;
+  background-position: center;
+}
+.hero-overlay {
+  background: linear-gradient(90deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.85) 40%, rgba(255,255,255,0.2) 100%);
+}
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px -5px rgba(30, 64, 175, 0.1);
+}
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: #1e40af;
+  box-shadow: 0 0 0 3px rgba(30, 64, 175, 0.1);
+}
+</style>
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body {
+  font-family: 'Inter', sans-serif;
+}
+h1, h2, h3 {
+  font-family: 'Sora', sans-serif;
+}
+.hero-section {
+background-image: url('https://readdy.ai/api/search-image?query=majestic%20night%20view%20of%20N%20Seoul%20Tower%20illuminated%20against%20dark%20sky%2C%20standing%20tall%20on%20Namsan%20Mountain%2C%20city%20lights%20twinkling%20below%2C%20dramatic%20architectural%20photography%2C%20professional%20high%20end%20shot%2C%20clean%20composition%20with%20deep%20rich%20colors%2C%20iconic%20landmark%20photography%20with%20perfect%20lighting&width=1200&height=600&seq=126&orientation=landscape');
+background-size: cover;
+background-position: center;
+}
+.hero-overlay {
+background: linear-gradient(90deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.85) 40%, rgba(255,255,255,0.2) 100%);
+}
+.service-card:hover {
+transform: translateY(-5px);
+box-shadow: 0 10px 25px -5px rgba(30, 64, 175, 0.1);
+}
+input:focus, textarea:focus, select:focus {
+outline: none;
+border-color: #1e40af;
+box-shadow: 0 0 0 3px rgba(30, 64, 175, 0.1);
+}
+</style>
+</head>
+<body class="bg-gray-50 pt-16">
+<!-- Header Navigation -->
+<header class="fixed w-full top-0 z-50 transition-all duration-300" id="mainHeader">
+<div class="bg-primary/95 backdrop-blur-sm text-white py-4 shadow-lg">
+<div class="container mx-auto px-6 flex justify-between items-center">
+<a href="#" id="siteLogo" class="text-2xl font-['Pacifico'] text-white transition-all duration-300 hover:scale-110 hover:text-blue-200">SeoulMate</a>
+<nav class="hidden md:flex space-x-1">
+<a href="#" class="bg-black bg-opacity-20 px-5 py-2 rounded-full text-white hover:bg-opacity-30 transition duration-300">Home</a>
+<a href="#services" class="px-5 py-2 rounded-full text-white hover:bg-black hover:bg-opacity-20 transition duration-300">Services</a>
+<a href="#testimonials" class="px-5 py-2 rounded-full text-white hover:bg-black hover:bg-opacity-20 transition duration-300">Testimonials</a>
+<a href="#contact" class="px-5 py-2 rounded-full bg-black bg-opacity-30 text-white hover:bg-opacity-40 transition duration-300">Contact Us</a>
+</nav>
+<button class="md:hidden w-10 h-10 flex items-center justify-center text-white">
+<i class="ri-menu-line ri-2x"></i>
+</button>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="hero-section relative">
+<div class="hero-overlay w-full h-full absolute inset-0"></div>
+<div class="container mx-auto px-6 py-20 relative z-10 flex flex-col md:flex-row items-center">
+<div class="w-full md:w-1/2 mb-10 md:mb-0">
+<h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Seamless Visa & Business Setup Consulting in Korea</h1>
+<p class="text-lg text-gray-700 mb-8">Your Trusted Partner for Launching, Expanding, and Living in Korea. Let SeoulMate be your guide — from visa applications to business establishment and market entry. Whether you're an entrepreneur, investor, or professional, we handle every step with clarity, care, and expertise.</p>
+<div class="flex flex-col sm:flex-row gap-4">
+<a href="#contact" class="bg-primary text-white px-8 py-3 rounded-button font-medium hover:bg-primary/90 transition duration-300 text-center whitespace-nowrap">Contact Us</a>
+<a href="#services" class="border-2 border-primary text-primary px-8 py-3 rounded-button font-medium hover:bg-primary/5 transition duration-300 text-center whitespace-nowrap">Our Services</a>
+</div>
+</div>
+<div class="w-full md:w-1/2 flex flex-col gap-4 justify-center">
+<div class="flex flex-wrap gap-4 justify-center">
+<div class="bg-primary text-white px-8 py-4 rounded-lg shadow-xl hover:scale-105 transition duration-300 flex items-center gap-3">
+<i class="ri-passport-line ri-lg"></i>
+<span class="font-medium whitespace-nowrap">Visa Services</span>
+</div>
+<div class="bg-secondary text-white px-8 py-4 rounded-lg shadow-xl hover:scale-105 transition duration-300 flex items-center gap-3">
+<i class="ri-building-line ri-lg"></i>
+<span class="font-medium whitespace-nowrap">Business Setup</span>
+</div>
+<div class="bg-blue-200 text-primary px-8 py-4 rounded-lg shadow-xl hover:scale-105 transition duration-300 flex items-center gap-3">
+<i class="ri-customer-service-2-line ri-lg"></i>
+<span class="font-medium whitespace-nowrap">Consulting</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section id="services" class="py-20">
+<div class="container mx-auto px-6">
+<h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-6 font-heading">Your All-in-One Partner for Visa and Business Setup in Korea</h2>
+<p class="text-lg text-gray-600 text-center max-w-4xl mx-auto mb-16">From initial planning to full execution, we guide you through every step of your relocation and business journey in South Korea—whether you're applying for a visa, launching a new business, or expanding into the Korean market.</p>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Service Card 1 -->
+<div class="service-card bg-white rounded-lg shadow-lg overflow-hidden transition duration-300">
+<div class="h-48 bg-primary/10 flex items-center justify-center">
+<div class="w-24 h-24 flex items-center justify-center bg-primary/20 rounded-full">
+<i class="ri-passport-line ri-3x text-primary"></i>
+</div>
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold text-gray-900 mb-3">Visa Consulting</h3>
+<p class="text-gray-600 mb-4">Comprehensive support for all visa types—work, investment, startup, student, and family. We stay with you from the first question to final approval.</p>
+<ul class="space-y-2 mb-6">
+<li class="flex items-start">
+<i class="ri-check-line text-primary mt-1 mr-2"></i>
+<span>Step-by-step guidance throughout the entire process</span>
+</li>
+<li class="flex items-start">
+<i class="ri-check-line text-primary mt-1 mr-2"></i>
+<span>Document preparation, submission, and interview coaching</span>
+</li>
+<li class="flex items-start">
+<i class="ri-check-line text-primary mt-1 mr-2"></i>
+<span>Legal assistance and personalized supervision when needed</span>
+</li>
+</ul>
+</div>
+</div>
+<!-- Service Card 2 -->
+<div class="service-card bg-white rounded-lg shadow-lg overflow-hidden transition duration-300">
+<div class="h-48 bg-secondary/10 flex items-center justify-center">
+<div class="w-24 h-24 flex items-center justify-center bg-secondary/20 rounded-full">
+<i class="ri-building-line ri-3x text-secondary"></i>
+</div>
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold text-gray-900 mb-3">Business Setup</h3>
+<p class="text-gray-600 mb-4">Whether you're starting from scratch or bringing a business into Korea, we make the process smooth, compliant, and efficient.</p>
+<ul class="space-y-2 mb-6">
+<li class="flex items-start">
+<i class="ri-check-line text-secondary mt-1 mr-2"></i>
+<span>Company formation and legal incorporation</span>
+</li>
+<li class="flex items-start">
+<i class="ri-check-line text-secondary mt-1 mr-2"></i>
+<span>Business licensing, tax ID, and banking setup</span>
+</li>
+<li class="flex items-start">
+<i class="ri-check-line text-secondary mt-1 mr-2"></i>
+<span>Ongoing administrative support and compliance management</span>
+</li>
+</ul>
+</div>
+</div>
+<!-- Service Card 3 -->
+<div class="service-card bg-white rounded-lg shadow-lg overflow-hidden transition duration-300">
+<div class="h-48 bg-blue-100 flex items-center justify-center">
+<div class="w-24 h-24 flex items-center justify-center bg-blue-200 rounded-full">
+<i class="ri-customer-service-2-line ri-3x text-primary"></i>
+</div>
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold text-gray-900 mb-3">Advisory Services</h3>
+<p class="text-gray-600 mb-4">Tailored strategies to help you succeed in the Korean market—backed by local expertise and cross-border insights.</p>
+<ul class="space-y-2 mb-6">
+<li class="flex items-start">
+<i class="ri-check-line text-primary mt-1 mr-2"></i>
+<span>Market entry and localization strategy</span>
+</li>
+<li class="flex items-start">
+<i class="ri-check-line text-primary mt-1 mr-2"></i>
+<span>Korean legal and regulatory compliance</span>
+</li>
+<li class="flex items-start">
+<i class="ri-check-line text-primary mt-1 mr-2"></i>
+<span>Business scaling and operational consulting</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Why Choose Us Section -->
+<section id="testimonials" class="py-20 bg-gray-50">
+<div class="container mx-auto px-6">
+<div class="max-w-4xl mx-auto text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6 font-heading">Why Choose SeoulMate for Your Korean Business Journey</h2>
+<p class="text-lg text-gray-600">With extensive experience and a strong track record, we provide reliable solutions that save you time, money, and stress.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Feature 1 -->
+<div class="bg-white p-8 rounded-lg shadow-lg text-center">
+<div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+<i class="ri-award-line ri-2x text-primary"></i>
+</div>
+<h3 class="text-xl font-bold text-gray-900 mb-3">Expertise</h3>
+<p class="text-gray-600">Our team is composed of seasoned business consultants with in-depth knowledge of the Korean visa system and business setup process.</p>
+</div>
+<!-- Feature 2 -->
+<div class="bg-white p-8 rounded-lg shadow-lg text-center">
+<div class="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+<i class="ri-translate-2-line ri-2x text-secondary"></i>
+</div>
+<h3 class="text-xl font-bold text-gray-900 mb-3">Multilingual Support</h3>
+<p class="text-gray-600">We offer support in English, Korean, and Russian to ensure clear communication and a smooth experience from start to finish.</p>
+</div>
+<!-- Feature 3 -->
+<div class="bg-white p-8 rounded-lg shadow-lg text-center">
+<div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+<i class="ri-shield-check-line ri-2x text-primary"></i>
+</div>
+<h3 class="text-xl font-bold text-gray-900 mb-3">Proven Success</h3>
+<p class="text-gray-600">We proudly maintain a 98% success rate in visa approvals and business formations, driven by transparency, consistent updates, and personalized service.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Form Section -->
+<section id="contact" class="py-20 bg-gray-50">
+<div class="container mx-auto px-6">
+<div class="max-w-5xl mx-auto bg-white rounded-xl shadow-xl overflow-hidden">
+<div class="grid grid-cols-1 md:grid-cols-2">
+<div class="p-10 bg-primary text-white">
+<h2 class="text-3xl font-bold mb-6 font-heading">Get in Touch</h2>
+<p class="mb-8">Fill out the form and our team will get back to you within 24 hours. We're here to help you navigate your Korean business journey.</p>
+<div class="space-y-6">
+<div class="flex items-start">
+<div class="w-10 h-10 flex items-center justify-center bg-white/20 rounded-full mr-4 flex-shrink-0">
+<i class="ri-mail-line text-white"></i>
+</div>
+<div>
+<h3 class="font-bold mb-1">Email Address</h3>
+<p class="text-blue-100">info@seoulmate.info</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-10 h-10 flex items-center justify-center bg-white/20 rounded-full mr-4 flex-shrink-0">
+<i class="ri-time-line text-white"></i>
+</div>
+<div>
+<h3 class="font-bold mb-1">Business Hours</h3>
+<p class="text-blue-100">Monday - Friday: 9:00 AM - 6:00 PM</p>
+</div>
+</div>
+</div>
+</div>
+<div class="p-10">
+<form id="contactForm" class="space-y-6">
+<div>
+<label for="name" class="block text-gray-700 font-medium mb-2">Full Name</label>
+<input type="text" id="name" name="name" class="w-full px-4 py-3 border border-gray-300 rounded-button focus:border-primary" placeholder="Enter your full name" required>
+</div>
+<div>
+<label for="email" class="block text-gray-700 font-medium mb-2">Email Address</label>
+<input type="email" id="email" name="email" class="w-full px-4 py-3 border border-gray-300 rounded-button focus:border-primary" placeholder="Enter your email address" required>
+</div>
+<div>
+<label for="nationality" class="block text-gray-700 font-medium mb-2">Nationality</label>
+<input type="text" id="nationality" name="nationality" class="w-full px-4 py-3 border border-gray-300 rounded-button focus:border-primary" placeholder="Enter your nationality" required>
+</div>
+<div>
+<label for="service" class="block text-gray-700 font-medium mb-2">Service Interested In</label>
+<div class="relative">
+<select id="service" name="service" class="w-full px-4 py-3 border border-gray-300 rounded-button focus:border-primary appearance-none pr-8" required>
+<option value="" disabled selected>Select a service</option>
+<option value="visa">Visa Consulting</option>
+<option value="business">Business Setup</option>
+<option value="advisory">Advisory Services</option>
+<option value="other">Other</option>
+</select>
+<div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
+<i class="ri-arrow-down-s-line text-gray-400"></i>
+</div>
+</div>
+</div>
+<div>
+<label for="message" class="block text-gray-700 font-medium mb-2">Your Message</label>
+<textarea id="message" name="message" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-button focus:border-primary" placeholder="Tell us about your needs"></textarea>
+</div>
+<div class="flex items-start">
+<div class="flex items-center h-5">
+<input id="privacy" type="checkbox" class="w-4 h-4 border border-gray-300 rounded accent-primary" required>
+</div>
+<label for="privacy" class="ml-3 text-sm text-gray-600">
+I agree to the <a href="#" class="text-primary hover:underline">Privacy Policy</a> and consent to being contacted regarding my inquiry.
+</label>
+</div>
+<button type="submit" class="w-full bg-primary text-white px-6 py-3 rounded-button font-medium hover:bg-primary/90 transition duration-300 whitespace-nowrap">Submit Inquiry</button>
+</form>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-20 bg-primary text-white">
+<div class="container mx-auto px-6 text-center">
+<h2 class="text-3xl md:text-4xl font-bold mb-6 font-heading">Ready to Start Your Korean Business Journey?</h2>
+<p class="text-xl text-blue-100 mb-10 max-w-3xl mx-auto">Let our experts guide you through every step of the process. Contact us today for a free consultation and take the first step toward your success in Korea.</p>
+<div class="flex justify-center">
+<a href="#contact" class="bg-white text-primary px-8 py-3 rounded-button font-medium hover:bg-gray-100 transition duration-300 whitespace-nowrap">Contact Us Now</a>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-gray-900 text-white pt-16 pb-8">
+<div class="container mx-auto px-6">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+<!-- Company Info -->
+<div>
+<a href="#" class="text-2xl font-['Pacifico'] text-white mb-6 inline-block">SeoulMate</a>
+<p class="text-gray-400 mb-6">Your trusted partner for visa and business setup solutions in South Korea.</p>
+<div class="flex space-x-4">
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition duration-300">
+<i class="ri-facebook-fill"></i>
+</a>
+<a href="https://www.instagram.com/seoulmate.info?igsh=MXJ1YWs1ZGN4YWQ0Nw==" target="_blank" rel="noopener" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition duration-300">
+    <i class="ri-instagram-fill"></i>
+  </a>
+</div>
+</div>
+<!-- Quick Links -->
+<div>
+<h3 class="text-lg font-bold mb-6">Quick Links</h3>
+<ul class="space-y-3">
+<li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Home</a></li>
+<li><a href="#services" class="text-gray-400 hover:text-white transition duration-300">Our Services</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition duration-300">About Us</a></li>
+<li><a href="#contact" class="text-gray-400 hover:text-white transition duration-300">Contact Us</a></li>
+</ul>
+</div>
+<!-- Services -->
+<div>
+<h3 class="text-lg font-bold mb-6">Our Services</h3>
+<ul class="space-y-3">
+<li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Visa Consulting</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Business Registration</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Tax & Accounting</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Legal Advisory</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Market Entry Strategy</a></li>
+</ul>
+</div>
+</div>
+<div class="pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
+<p class="text-gray-500 text-sm mb-4 md:mb-0">&copy; 2025 SeoulMate. All rights reserved.</p>
+<div class="flex space-x-6">
+<a href="#" class="text-gray-500 hover:text-white text-sm">Privacy Policy</a>
+<a href="#" class="text-gray-500 hover:text-white text-sm">Terms of Service</a>
+<a href="#" class="text-gray-500 hover:text-white text-sm">Cookie Policy</a>
+</div>
+</div>
+</div>
+</footer>
+<!-- Scripts -->
+<script id="contactForm">
+document.addEventListener('DOMContentLoaded', function() {
+const form = document.getElementById('contactForm');
+if (form) {
+form.addEventListener('submit', function(e) {
+e.preventDefault();
+// Normally would send data to server here
+// Show success message
+const formElements = form.elements;
+for (let i = 0; i < formElements.length; i++) {
+formElements[i].disabled = true;
+}
+form.innerHTML = `
+<div class="text-center py-8">
+<div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+<i class="ri-check-line ri-2x text-green-600"></i>
+</div>
+<h3 class="text-2xl font-bold text-gray-900 mb-2">Thank You!</h3>
+<p class="text-gray-600">Your message has been sent successfully. One of our consultants will contact you within 24 hours.</p>
+</div>
+`;
+});
+}
+});
+</script>
+<script id="headerInteraction">
+document.addEventListener('DOMContentLoaded', function() {
+const header = document.getElementById('mainHeader');
+const siteLogo = document.getElementById('siteLogo');
+let lastScroll = 0;
+window.addEventListener('scroll', () => {
+const currentScroll = window.pageYOffset;
+if (currentScroll <= 0) {
+header.classList.remove('py-2');
+header.classList.remove('-translate-y-full');
+} else if (currentScroll > lastScroll) {
+header.classList.add('-translate-y-full');
+} else {
+header.classList.remove('-translate-y-full');
+header.classList.add('py-2');
+}
+lastScroll = currentScroll;
+});
+siteLogo.addEventListener('click', function(e) {
+  e.preventDefault();
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+});});
+</script>
+<script id="mobileMenu">
+document.addEventListener('DOMContentLoaded', function() {
+const menuButton = document.querySelector('button.md\\:hidden');
+const mobileMenu = document.createElement('div');
+mobileMenu.className = 'fixed inset-0 bg-gray-900 bg-opacity-90 z-50 flex flex-col items-center justify-center transform translate-x-full transition-transform duration-300 ease-in-out';
+mobileMenu.innerHTML = `
+<button class="absolute top-6 right-6 text-white w-10 h-10 flex items-center justify-center">
+<i class="ri-close-line ri-2x"></i>
+</button>
+<nav class="flex flex-col space-y-6 text-center">
+<a href="#" class="text-white text-xl hover:text-blue-300 transition duration-300">Home</a>
+<a href="#services" class="text-white text-xl hover:text-blue-300 transition duration-300">Services</a>
+<a href="#testimonials" class="text-white text-xl hover:text-blue-300 transition duration-300">Testimonials</a>
+<a href="#contact" class="bg-primary text-white px-8 py-3 rounded-full text-xl hover:bg-primary/90 transition duration-300">Contact Us</a>
+</nav>
+`;
+document.body.appendChild(mobileMenu);
+const closeButton = mobileMenu.querySelector('button');
+menuButton.addEventListener('click', function() {
+mobileMenu.classList.remove('translate-x-full');
+document.body.classList.add('overflow-hidden');
+});
+closeButton.addEventListener('click', function() {
+mobileMenu.classList.add('translate-x-full');
+document.body.classList.remove('overflow-hidden');
+});
+const mobileLinks = mobileMenu.querySelectorAll('a');
+mobileLinks.forEach(link => {
+link.addEventListener('click', function() {
+mobileMenu.classList.add('translate-x-full');
+document.body.classList.remove('overflow-hidden');
+});
+});
+});
+</script>
+</body>
+</html>
